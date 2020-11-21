@@ -12,10 +12,9 @@ public class Print_1206 {
         scanner.close();
 
         if(a == 11 || a == 12 || a == 13) System.out.println(a+"th");
-        else if(a % 10 == 1)System.out.println(a+"st");
-        else if(a % 10 == 2)System.out.println(a+"nd");
-        else if(a % 10 == 3)System.out.println(a+"rd");
+        else if(a % 10 == 1) System.out.println(a+"st");
+        else if(a % 10 == 2) System.out.println(a+"nd");
+        else if(a % 10 == 3) System.out.println(a+"rd");
         else System.out.println(a+"th");
-
     }
 }

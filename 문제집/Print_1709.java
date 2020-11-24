@@ -19,6 +19,6 @@ public class Print_1709 {
         }
         scanner.close();
 
-        while(!queue.isEmpty()) System.out.println(queue.poll());
+        while(!queue.isEmpty()) System.out.print(queue.poll()+" ");
     }
 }

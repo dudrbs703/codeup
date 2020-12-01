@@ -6,12 +6,10 @@ import java.util.Scanner;
  * Print_1675
  */
 
-public class Print_1675 {
+public class Print_1294 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
-        //int NUMBER_OF_ALPHABAT = 26;
 
         char[]c = scanner.nextLine().toCharArray();
         scanner.close();
@@ -24,11 +22,10 @@ public class Print_1675 {
                 continue;
             }
 
-            if(ch == 'a') ch = 'x';
-            else if(ch == 'b') ch = 'y';
-            else if(ch == 'c') ch = 'z';
-            else ch-=3; 
-            //(char)((ch - 'a' - 3) % NUMBER_OF_ALPHABAT +'a');
+            if(ch == 'x') ch = 'a';
+            else if(ch == 'y') ch = 'b';
+            else if(ch == 'z') ch = 'c';
+            else ch+=3; 
 
             builder.append(ch);
         }

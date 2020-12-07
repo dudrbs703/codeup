@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 /**
- * Print_1462
+ * Print_1463
  */
-public class Print_1462 {
+public class Print_1463 {
 
     public static void main(String[] args) {
         
@@ -18,7 +18,7 @@ public class Print_1462 {
 
         while(level < a)
         {
-            for(int i=0; i<array.length;i++)
+            for(int i=array.length-1; i>=0;i--)
             {
                 array[i][level] = count++;
             }

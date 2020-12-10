@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 /**
- * Print_1466
+ * Print_1467
  */
-public class Print_1466 {
+public class Print_1467 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -17,13 +17,14 @@ public class Print_1466 {
 
         while(level >= 0)
         {
-            for(int i=array.length-1; i>=0; i--)
+            for(int i=0; i<array.length; i++)
             {
-                array[i][level]= count++;
+                array[i][level] = count++;
             }
             level--;
         }
 
+        
         for(int i=0; i<array.length; i++)
         {
             for(int j=0; j<array[i].length; j++)

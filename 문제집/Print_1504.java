@@ -15,13 +15,27 @@ public class Print_1504 {
 
         int count = 1;
         int level = 0;
+        boolean isReversed = false;
 
         while(level < a)
         {
-            for(int i=0; i<array.length;i++)
+            if(!isReversed)
             {
-                array[i][level] = count++;
+                for(int i=0; i<array.length;i++)
+                {
+                    array[i][level] = count++;
+                }
+
+                isReversed = true;
+                
+            } else {
+                for(int i=array.length-1; i>=0;i--)
+                {
+                    array[i][level] = count++;
+                }
+                isReversed = false;
             }
+
             level++;
         }
 

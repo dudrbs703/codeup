@@ -31,10 +31,5 @@ public class Print_4011 {
         }
 
         System.out.println(tmp);
-        
-
-
-
-
     }
 }

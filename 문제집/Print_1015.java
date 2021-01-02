@@ -8,7 +8,7 @@ public class Print_1015
     public static void main(String[] args)
      {
         Scanner scanner = new Scanner(System.in);
-        int a = scanner.nextFloat();
+        int a = scanner.nextInt();
         scanner.close();
 
         System.out.printf(String.format("%.2f", a));

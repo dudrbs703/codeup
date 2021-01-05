@@ -10,6 +10,7 @@ public class Print_2623 {
 
         int a = scanner.nextInt();
         int b = scanner.nextInt();
+        scanner.close();
 
         int tmp = 1;
         for(int i=1; i<=Math.min(a, b); i++)

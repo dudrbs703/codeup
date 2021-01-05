@@ -15,8 +15,8 @@ public class Print_1476 {
 
         int [][]data = new int[a][b];
         int count = 1;
-
         int level = 0;
+        
         while(level < a + b)
         {
             for(int i=0; i<b; i++)

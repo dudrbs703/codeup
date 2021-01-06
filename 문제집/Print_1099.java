@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import org.graalvm.compiler.asm.sparc.SPARCAssembler.Br;
-
 /**
  * Print_1099
  */
@@ -10,50 +8,43 @@ public class Print_1099 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int width = scanner.nextInt();
-        int height = scanner.nextInt();
+        int [][]data = new int[10][10];
 
-        //int [][]board = new int[height][width];
-        int [][]board = {
-            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-            {1, 0, 0, 1, 0, 0, 0, 0, 0, 1},
-            {1, 0, 0 ,1, 1, 1, 0, 0, 0 ,1},
-            {1, 0, 0, 0, 0, 0, 0, 1, 0, 1},
-            {1, 0, 0, 0 ,0, 0, 0, 1, 0 ,1},
-            {1, 0, 0, 0, 0, 1, 0, 1, 0, 1},
-            {1, 0, 0, 0, 0, 1, 2, 1, 0, 1},
-            {1, 0, 0, 0, 0, 1, 0, 0, 0, 1},
-            {1, 0, 0, 0, 0, 0 ,0, 0, 0, 1},
-            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1,}
-        };
-        /*
-        for(int i=0; i<board.length; i++)
+        for(int i=0; i<data.length; i++)
         {
-            for(int j=0; j<board.length; j++)
+            for(int j=0; j<data[i].length; j++)
             {
-                board[i][j] = scanner.nextInt();
+                data[i][j] = scanner.nextInt();
             }
-        }*/
+        }
+        scanner.close();
 
-        int x = 1;
-        int y = 1;
+        int x_position = 1;
+        int y_position = 1;
 
         while(true)
         {
-            if(board[x][y] == 2 ) break;
-            if(board[x][y++] == 0) board[x][y] = 9;
-            //if(board[x])
+            if(x_position >= data.length || y_position >= data.length) break;
+            if(data[x_position][y_position] == 2)
+            {
+                data[x_position][y_position] = 9;
+                break;
+            }
+
+            if(data[x_position][y_position] == 0) data[x_position][y_position] = 9;
+            if(data[x_position][y_position+1] == 1) x_position++;
+            else y_position++;
         }
 
-        scanner.close();
-
-        for(int i=0; i<board.length; i++)
+        System.out.println();
+        for(int i=0; i<data.length; i++)
         {
-            for(int j=0; j<board.length; j++)
+            for(int j=0; j<data[i].length; j++)
             {
-                System.out.print(board[i][j]);
+                System.out.print(data[i][j]+" ");
             }
             System.out.println();
         }
+
     }
 }

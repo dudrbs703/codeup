@@ -8,30 +8,37 @@ public class Print_1552 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        f(scanner.nextDouble());
+        double a = scanner.nextDouble();
         scanner.close();
-    }
 
-    public static void f(double a)
-    {
-        StringBuilder builder = new StringBuilder();
-        char []tmp = String.valueOf(a).toCharArray();        
-        int position = String.valueOf(a).indexOf((int)'.');
-
-        for(int i=position+1; i<tmp.length; i++)
-        {
-            builder.append(String.valueOf(tmp[i]));
-        }
-
-        System.out.printf("%.14l", Double.parseDouble(builder.toString()));
-        //System.out.println(Double.parseDouble(builder.toString()));
+        System.out.println(String.format("%.14f", a-(int)a));
 
         /*
+        int position = 0;
+        for(int i=0; i<a.length(); i++)
+        {
+            if(a.charAt(i) == '.'){
+                position = i;
+                break;
+            }
+        }
+
+        StringBuilder builder = new StringBuilder();
+        for(int i=position+1; i<a.length(); i++)
+        {
+            builder.append(a.charAt(i));
+        }
+
         for(int i=builder.length(); i<14; i++)
         {
             builder.append("0");
+
         }
 
-        System.out.println("0."+builder.toString());*/
+        
+        
+
+        System.out.println((double)Integer.parseInt(builder.toString()));*/
+        
     }
 }

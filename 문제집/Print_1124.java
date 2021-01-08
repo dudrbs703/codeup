@@ -15,9 +15,22 @@ public class Print_1124 {
         int h_atomic_weight = 1;
         
         int c = 0;
-        int h = 0;
+        StringBuilder builder = new StringBuilder();
+        if(a.charAt(0) == 'C') {
+            c = Character.getNumericValue(a.charAt(1));
+            for(int i=3; i<a.length(); i++)
+            {
+                builder.append(String.valueOf(a.charAt(i)));
+            }
+        } else {
+            for(int i=2; i<a.length(); i++)
+            {
+                builder.append(String.valueOf(a.charAt(i)));
+            }
+        }
         
-    
-        System.out.println((8 * c_atomic_weight) + (h * h_atomic_weight));
+        int result = (c * c_atomic_weight) + (Integer.parseInt(builder.toString()) * h_atomic_weight); 
+
+        System.out.println(result);
     }
 }

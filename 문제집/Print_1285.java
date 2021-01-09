@@ -32,18 +32,17 @@ public class Print_1285 {
             builder = new StringBuilder();
             char op = queue.poll();
             if(op == '=') break;
-            int tmp = 0;
 
             while(Character.isDigit(queue.peek()))
             {
                 builder.append(Character.getNumericValue(queue.poll()));
             }
-            tmp = Integer.parseInt(builder.toString());
+            int tmp = Integer.parseInt(builder.toString());
 
             if(op == '+') result += tmp;
-            else if(op == '-')result -= tmp;
-            else if(op == '*')result *= tmp;
-            else if(op == '/')result /= tmp;
+            else if(op == '-') result -= tmp;
+            else if(op == '*') result *= tmp;
+            else if(op == '/') result /= tmp;
         }
 
         System.out.println(result);

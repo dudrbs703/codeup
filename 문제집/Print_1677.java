@@ -10,6 +10,7 @@ public class Print_1677 {
 
         int a = scanner.nextInt();
         int b = scanner.nextInt();
+        scanner.close();
 
         System.out.print("+");
         for(int i=0; i<a-2; i++)
@@ -32,8 +33,6 @@ public class Print_1677 {
         {
             System.out.print("-");
         }
-        System.out.print("+");
-
-
+        System.out.println("+");
     }
 }

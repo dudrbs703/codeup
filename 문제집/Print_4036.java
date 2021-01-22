@@ -12,8 +12,8 @@ public class Print_4036 {
         int m = scanner.nextInt();
         scanner.close();
 
-        int a = (n+m)/2;
-        int b = a-m;
+        int a = (n + m) / 2;
+        int b = a - m;
         
         System.out.println(a);
         System.out.println(b);

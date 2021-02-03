@@ -63,8 +63,6 @@ public class Print_3021 {
                         inner += count;
                         if(inner >= 10) 
                         {
-                            //count = String.valueOf(inner).charAt(0);
-                            //tmp.push(String.valueOf(inner).charAt(1));
                             count = Character.getNumericValue(String.valueOf(inner).charAt(0));
                             tmp.push(String.valueOf(inner).charAt(1));
                         }
@@ -89,12 +87,12 @@ public class Print_3021 {
             }
         }
 
-        String answer = "";
+        StringBuilder builder = new StringBuilder();
         while(!tmp.isEmpty())
         {
-            answer += tmp.pop();
+            builder.append(tmp.pop());
         }
 
-        System.out.println(answer);
+        System.out.println(builder.toString());
     }
 }
